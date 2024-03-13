@@ -46,21 +46,29 @@ def test_it_comes_of_age_at_33():
     hobbit.celebrate_birthday()
     assert(hobbit.is_adult()) == True
 
-'''
-Create your own tests:
 
-Test that it is old at the age of 101
-    Create a Hobbit
-    Have Hobbit age 101 years
-    Check to see that hobbit.is_old() returns True
+# Create your own tests:
 
-Test that it has a ring if its name is Frodo
-    Create a Hobbit named Frodo
-    Create a second Hobbit named Sam
-    Check to see if has_ring() for Frodo returns True
-    Check to see if has_ring() for Sam returns True
+# Test that it is old at the age of 101
+#     Create a Hobbit
+#     Have Hobbit age 101 years
+#     Check to see that hobbit.is_old() returns True
+def test_its_old_at_101():
+    hobbit = Hobbit('Gerontius')
 
-Test that they are short
-    Create a Hobbit
-    Check to see if is_short() returns True
-'''
+    for i in range(100):
+        hobbit.celebrate_birthday()
+
+    assert(hobbit.is_old()) == False
+
+    hobbit.celebrate_birthday()
+    assert(hobbit.is_old()) == True
+# Test that it has a ring if its name is Frodo
+#     Create a Hobbit named Frodo
+#     Create a second Hobbit named Sam
+#     Check to see if has_ring() for Frodo returns True
+#     Check to see if has_ring() for Sam returns True
+
+# Test that they are short
+#     Create a Hobbit
+#     Check to see if is_short() returns True
